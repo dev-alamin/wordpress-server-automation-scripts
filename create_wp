@@ -90,7 +90,7 @@ server {
     add_header X-XSS-Protection "1; mode=block";
 
     location / {
-        try_files \$uri \$uri/ /index.php?$args;
+        try_files \$uri \$uri/ /index.php?\$args;
     }
 
     location ~ \.php$ {
